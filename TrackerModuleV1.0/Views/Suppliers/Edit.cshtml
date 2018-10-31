@@ -1,5 +1,7 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.Supplier
-
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
 @{
     ViewBag.Title = "Edit";
 }
@@ -10,7 +12,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Supplier</h4>
         <hr />

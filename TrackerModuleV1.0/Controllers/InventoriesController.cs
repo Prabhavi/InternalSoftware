@@ -21,12 +21,16 @@ namespace TrackerModuleV1._0.Controllers
         //    return View(db.Inventories.ToList());
         //}
 
-        public ActionResult Index (string sortOrder)
+        public ActionResult Index(string sortOrder, string searchDesc, string id)
         {
             //ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "PartName" : "";
             ViewBag.DateSortParm = sortOrder == "DeliveryDate" ? "DeliveryDate_desc" : "DeliveryDate";
             var inventories = from i in db.Inventories
                               select i;
+            if (!String.IsNullOrEmpty(searchDesc))
+            {
+                inventories = inventories.Where(i => i.ShortDescription.Contains(searchDesc));
+            }
             switch (sortOrder)
             {
                 //case "PartName":
@@ -44,6 +48,17 @@ namespace TrackerModuleV1._0.Controllers
                     break;
             }
             return View(inventories.ToList());
+
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
+            //Part inventory = db.Parts.Find(id);
+            //if (inventory != null)
+            //{
+            //    //return HttpNotFound();
+            //}
+            //return View(inventory);
         }
 
         // GET: Inventories/Details/5
@@ -72,7 +87,7 @@ namespace TrackerModuleV1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "InventoryId,ShortDescription,MaterialType,StoreLocation,UnitPrice,DeliveryStatus,DeliveryDate,OpenOrderQnty,QntyInTransit,DeliveryLocation,DeliveryQnty,UoM,UsedQnty,LastUsedDate,Stock,SafetyStock,RackNo,LineNo")] Inventory inventory)
+        public ActionResult Create([Bind(Include = "Part_PartId,InventoryId,ShortDescription,MaterialType,StoreLocation,UnitPrice,DeliveryStatus,DeliveryDate,OpenOrderQnty,QntyInTransit,DeliveryLocation,DeliveryQnty,UoM,UsedQnty,LastUsedDate,Stock,SafetyStock,RackNo,LineNo")] Inventory inventory)
         {
             if (ModelState.IsValid)
             {

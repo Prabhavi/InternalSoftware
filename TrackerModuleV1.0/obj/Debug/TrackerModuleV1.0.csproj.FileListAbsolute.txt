@@ -511,3 +511,217 @@ C:\Users\Prabavi\Desktop\New folder\maria\PTM2\TrackerModuleV1.0\obj\Debug\Track
 C:\Users\Prabavi\Desktop\New folder\maria\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.CopyComplete
 C:\Users\Prabavi\Desktop\New folder\maria\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.dll
 C:\Users\Prabavi\Desktop\New folder\maria\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.pdb
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\csc.exe
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\vbc.exe
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\VBCSCompiler.exe
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\TrackerModuleV1.0.dll.config
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\TrackerModuleV1.0.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\TrackerModuleV1.0.pdb
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Antlr3.Runtime.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\EntityFramework.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\EntityFramework.SqlServer.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Newtonsoft.Json.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Owin.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Helpers.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Mvc.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Optimization.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Razor.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Razor.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\WebGrease.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Helpers.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Mvc.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Optimization.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.Razor.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Razor.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Antlr3.Runtime.pdb
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Newtonsoft.Json.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\EntityFramework.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\EntityFramework.SqlServer.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csprojAssemblyReference.cache
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate1.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate2.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate3.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate4.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany1.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany2.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany3.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany4.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany5.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany6.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany7.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany8.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany9.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany10.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate5.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.Add_PartsDB.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.Add_PartsDB1.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.levelModel.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate6.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATE.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.level_Models.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED2.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED3.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED4.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED5.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreatexc.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.afterModelUpdate.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.UpdateModelNew.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.UpdateModelNewx.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.UpdateModelNewx1.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.addSuppliertable.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.addInventorytable.resources
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.GenerateResource.cache
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.CoreCompileInputs.cache
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.CopyComplete
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.dll
+C:\Users\Prabavi\Desktop\New folder\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.pdb
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\csc.exe
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\vbc.exe
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\VBCSCompiler.exe
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\TrackerModuleV1.0.dll.config
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\TrackerModuleV1.0.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\TrackerModuleV1.0.pdb
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Antlr3.Runtime.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\EntityFramework.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\EntityFramework.SqlServer.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Newtonsoft.Json.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Owin.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Helpers.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Mvc.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Optimization.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Razor.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Razor.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\WebGrease.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Helpers.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Mvc.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Optimization.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.Razor.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\System.Web.WebPages.Razor.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Antlr3.Runtime.pdb
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Newtonsoft.Json.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\EntityFramework.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\EntityFramework.SqlServer.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csprojAssemblyReference.cache
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate1.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate2.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate3.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate4.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany1.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany2.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany3.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany4.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany5.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany6.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany7.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany8.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany9.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.ManyToMany10.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate5.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.Add_PartsDB.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.Add_PartsDB1.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.levelModel.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreate6.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATE.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.level_Models.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED2.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED3.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED4.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.MODELUPDATED5.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.InitialCreatexc.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.afterModelUpdate.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.UpdateModelNew.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.UpdateModelNewx.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.UpdateModelNewx1.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.addSuppliertable.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1._0.Migrations.PTM.addInventorytable.resources
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.GenerateResource.cache
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.CoreCompileInputs.cache
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.csproj.CopyComplete
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.dll
+C:\Users\NLT054\Downloads\PTM2\PTM2\TrackerModuleV1.0\obj\Debug\TrackerModuleV1.0.pdb

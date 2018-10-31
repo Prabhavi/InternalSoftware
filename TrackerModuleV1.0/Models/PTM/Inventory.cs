@@ -23,8 +23,13 @@ namespace TrackerModuleV1._0.Models.PTM
         public Supplier Supplier { get; set; }
         public string DeliveryStatus { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Delivery Date")]
         public DateTime DeliveryDate { get; set; }
+
+        //[Display(Name = "Delivery Date")]
+        //public DateTime DeliveryDate { get; set; }
 
         public int OpenOrderQnty { get; set; }
         public int QntyInTransit { get; set; }
@@ -33,8 +38,13 @@ namespace TrackerModuleV1._0.Models.PTM
         public string UoM { get; set; }
         public int UsedQnty { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Last Used Date")]
         public DateTime LastUsedDate { get; set; }
+
+        //[Display(Name = "Last Used Date")]
+        //public DateTime LastUsedDate { get; set; }
 
         public User LastUser { get; set; }
         public int Stock { get; set; }

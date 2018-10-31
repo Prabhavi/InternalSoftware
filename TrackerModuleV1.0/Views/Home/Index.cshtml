@@ -1,9 +1,13 @@
 ﻿@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
-    <h1 style="text-align:center">Welcome to Internal Software</h1>
+    <h1 style="text-align:center;color:#2f75b5">Welcome to Internal Software</h1>
 </div>
 
 <center>
@@ -11,10 +15,14 @@
         @*<div class="col-md-4" style="background-color:aquamarine;margin:20px 20px 20px 20px;">*@
         <div class="col-md-4">
             @*<h2>Check Projects</h2>*@
-            <img src="~/Content/images/projects.png" alt="ProjectIcon" width=50% height=50%>
+            @*<img src="~/Content/images/projects3.png" alt="Projects Icon" width=50% height=50%>*@
+            <a href='@Url.Action("Index", "Projects")'>
+                <img src='@Url.Content("~/Content/images/projects3.png")' alt='Project Icon' width=50% height=50% />
+            </a>
             @*<input type="submit" value="Projects" onclick="location.href='@Url.Action("Index", "Projects")'" />*@
-            <p>
-                @Html.ActionLink("Project", "Index", "Projects")
+            <p style="text-align:center;color:#2f75b5">
+                @*@Html.ActionLink("Project", "Index", "Projects")*@
+                @Html.DisplayName("Projects")
             </p>
             @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
         </div>
@@ -22,18 +30,24 @@
         @*<div class="col-md-4" style="background-color:aquamarine;margin:20px 20px 20px 20px">*@
         <div class="col-md-4">
             @*<h2>Inventory</h2>*@
-            <img src="~/Content/images/inventory.png" alt="InventoryIcon" width=50% height=50%>
-
-            <p>
-                @Html.ActionLink("Inventory", "Index", "Inventories")
-            </p>
+            @*<img src="~/Content/images/inventory3.png" alt="Inventory Icon" width=50% height=50%>*@
+            <a href='@Url.Action("Index", "Inventories")'>
+                <img src='@Url.Content("~/Content/images/inventory3.png")' alt='Inventory Icon' width=50% height=50% />
+            </a>
+            <p style="text-align:center;color:#2f75b5">
+                @*@Html.ActionLink("Inventory", "Index", "Inventories")*@
+                @Html.DisplayName("Inventory")
+            </pstyle="text-align:center;color:#2f75b5">
         </div>
 
         <div class="col-md-4">
-            <img src="~/Content/images/parts.png" alt="UsersIcon" width=80% height=80%>
-
-            <p>
-                @Html.ActionLink("Part", "Index", "Parts")
+            @*<img src="~/Content/images/parts4.png" alt="Parts Icon" width=50% height=50%>*@
+            <a href='@Url.Action("Index", "Parts")'>
+                <img src='@Url.Content("~/Content/images/parts4.png")' alt='Parts Icon' width=50% height=50% />
+            </a>
+            <p style="text-align:center;color:#2f75b5"> 
+                @*@Html.ActionLink("Part", "Index", "Parts")*@
+                @Html.DisplayName("Part")
             </p>
         </div>
     </div>
@@ -42,19 +56,25 @@
 <center>
     <div class-"row">
         <div class="col-md-4">
-            <img src="~/Content/images/suppliers.png" alt="UsersIcon" width=50% height=50%>
-
-            <p>
-                @Html.ActionLink("Supplier", "Index", "Suppliers")
+            @*<img src="~/Content/images/suppliers3.png" alt="UsersIcon" width=50% height=50%>*@
+            <a href='@Url.Action("Index", "Suppliers")'>
+                <img src='@Url.Content("~/Content/images/suppliers3.png")' alt='Supplier Icon' width=50% height=50% />
+            </a>
+            <p style="text-align:center;color:#2f75b5">
+                @*@Html.ActionLink("Supplier", "Index", "Suppliers")*@
+                @Html.DisplayName("Supplier")
             </p>
         </div>
 
         @*<div class="col-md-4" style="background-color:aquamarine;margin:20px 20px 20px 20px">*@
         <div class="col-md-4">
-            <img src="~/Content/images/users.png" alt="UsersIcon" width=50% height=50%>
-
-            <p>
-                @Html.ActionLink("Collaborators", "Index", "Users")
+            @*<img src="~/Content/images/users4.png" alt="Users Icon" width=50% height=50%>*@
+            <a href='@Url.Action("Index", "Users")'>
+                <img src='@Url.Content("~/Content/images/users4.png")' alt='User Icon' width=50% height=50% />
+            </a>
+            <p style="text-align:center;color:#2f75b5">
+                @*@Html.ActionLink("Collaborators", "Index", "Users")*@
+                @Html.DisplayName("Collaborators")
             </p>
         </div>
     </div>

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using TrackerModuleV1._0.Data;
 using TrackerModuleV1._0.Models.PTM;
+using static TrackerModuleV1._0.Models.PTM.EnumClass;
 
 namespace TrackerModuleV1._0.Controllers
 {
@@ -40,6 +41,16 @@ namespace TrackerModuleV1._0.Controllers
         // GET: Parts/Create
         public ActionResult Create()
         {
+            var partTypeList = Enum.GetValues(typeof(PartType))
+                .Cast<PartType>()
+                .Select(t => new AccessClass
+                {
+                    ID = ((int)t),
+                    Name = t.ToString()
+                });
+            ViewBag.ListData = partTypeList;
+
+
             ViewBag.CreatedUserId = new SelectList(db.Users, "UserId", "FirstName");
             return View();
         }
@@ -129,5 +140,7 @@ namespace TrackerModuleV1._0.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
     }
 }

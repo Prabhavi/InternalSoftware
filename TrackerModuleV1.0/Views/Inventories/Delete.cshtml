@@ -1,5 +1,7 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.Inventory
-
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
 @{
     ViewBag.Title = "Delete";
 }
@@ -149,7 +151,8 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

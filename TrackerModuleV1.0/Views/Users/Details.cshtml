@@ -1,5 +1,7 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.User
-
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
 @{
     ViewBag.Title = "Details";
 }
@@ -39,12 +41,12 @@
         </dt>
         <table class="table">
             <dd>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Project ID</th>
-                </tr>
-                @foreach (var item in Model.projects)
-                {
+            <tr>
+                <th>Project Name</th>
+                <th>Project ID</th>
+            </tr>
+            @foreach (var item in Model.projects)
+            {
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.ProjectName)
@@ -53,7 +55,7 @@
                         @Html.DisplayFor(modelItem => item.ProjectId)
                     </td>
                 </tr>
-                }
+            }
             </dd>
         </table>
     </dl>

@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<TrackerModuleV1._0.Models.PTM.Project>
-
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
 @{
     ViewBag.Title = "All";
 }
@@ -19,28 +21,29 @@
         <th>
             @Html.DisplayName("Short Description")
         </th>
-        
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProjectId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProjectName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShortDescription)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })|
-            @Html.ActionLink("Collaborators", "Delete", new { id = item.ProjectId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDescription)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })|
+                @Html.ActionLink("Collaborators", "Delete", new { id = item.ProjectId })
+            </td>
+        </tr>
+    }
 
 </table>

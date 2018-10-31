@@ -1,5 +1,8 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.Project
 @{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+@{
     ViewBag.Title = "Search Project";
     //List<SelectListItem> list = new List <SelectListItem>();
     //list.Add(new SelectListItem() { Text = "Project1", Value = "101" });
@@ -13,59 +16,59 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4>Project</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.Label("Project Name", htmlAttributes: new { @class = "control-label col-md-2" })
-        @*@Html.Label(ViewBag.spn as String)*@
-        <div class="col-md-10">
-            @Html.DropDownListFor(m => m.ProjectName, ViewBag.projectListName as SelectList, "--Select--", new { @class = "form-control" })
-            @*@Html.DropDownList("ProjectListName", ViewBag.projectListName as SelectList, "Select", new { @class = "form-control" })*@
-        </div>
-        
-    </div>
-    <div class="form-group">
-        @Html.Label(" ", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.Label("OR", htmlAttributes: new { @class = "control-label col-md-2" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.Label("Project ID", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownListFor(m => m.ProjectId, ViewBag.projectListId as SelectList, "--Select--", new { @class = "form-control"})
-            @*@Html.DropDownList("ProjectListId", ViewBag.projectListId as SelectList, "Select", new { @class = "form-control" })*@
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.Label(" ", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.Label("OR", htmlAttributes: new { @class = "control-label col-md-2" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.Label("Short Description", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @*@Html.TextBox("Description", null, new { @class = "form-control" })*@
-            @Html.EditorFor(m=> m.ShortDescription, new { htmlAttributes = new { @class = "form-control" } })
-        </div>
-    </div>
-
-    @*<div class="form-group">
-            @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="form-horizontal">
+        <h4>Project</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("Project Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*@Html.Label(ViewBag.spn as String)*@
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(m => m.ProjectName, ViewBag.projectListName as SelectList, "--Select--", new { @class = "form-control" })
+                @*@Html.DropDownList("ProjectListName", ViewBag.projectListName as SelectList, "Select", new { @class = "form-control" })*@
             </div>
-        </div>*@
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="SEARCH" class="btn btn-default" />
+        </div>
+        <div class="form-group">
+            @Html.Label(" ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label("OR", htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Project ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(m => m.ProjectId, ViewBag.projectListId as SelectList, "--Select--", new { @class = "form-control" })
+                @*@Html.DropDownList("ProjectListId", ViewBag.projectListId as SelectList, "Select", new { @class = "form-control" })*@
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label(" ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label("OR", htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Short Description", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.TextBox("Description", null, new { @class = "form-control" })*@
+                @Html.EditorFor(m => m.ShortDescription, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="SEARCH" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
 }
 

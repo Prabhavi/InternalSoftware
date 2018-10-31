@@ -1,20 +1,100 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.Part
-
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
 @{
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
+<head>
 
-@using (Html.BeginForm()) 
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#PartType").change(function () {
+                var PartType = $("#PartType").val();
+                $("#PartTypelabel").text(PartType);
+                ////////
+
+
+                //    var partTypeList = Enum.GetValues(typeof (SubCategory))
+                //        .Cast<PartType>()
+                //        .Select(t => new AccessClass
+                //    {
+                //                ID = ((int)t),
+                //        Name = t.ToString()
+                //});
+                //ViewBag.ListData = partTypeList;
+
+                ///////
+
+                //alert(PartType);
+            });
+
+
+            $("#SubCategory").change(function () {
+                var SubCategory = $("#SubCategory").val();
+                $("#SubCategorylabel").text(SubCategory);
+                //alert(SubCategory);
+            });
+
+            $("#Specification").keyup(function (event) {
+                var Specification = $(this).val();
+                $("#Specificationlabel").text(Specification);
+            })
+            $("#Variant").keyup(function (event) {
+                var Specification = $(this).val();
+                $("#Variantlabel").text(Specification);
+            })
+        });
+    </script>
+</head>
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Part</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="col-md-3">
+                @Html.Label("PartType: ")
+                @Html.Label(" ", new { id = "PartTypelabel" })
+            </div>
+            <div class="col-md-3">
+                @Html.Label("SubCategory: ")
+                @Html.Label(" ", new { id = "SubCategorylabel" })
+            </div>
+            <div class="col-md-3">
+                @Html.Label("Specification: ")
+                @Html.Label(" ", new { id = "Specificationlabel" })
+            </div>
+            <div class="col-md-3">
+                @Html.Label("Variant: ")
+                @Html.Label(" ", new { id = "Variantlabel" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                @Html.DropDownList("PartType", new SelectList(ViewBag.ListData, "ID", "Name"), htmlAttributes: new { @id = "PartType", @class = "form-control" })
+
+            </div>
+            <div class="col-md-3">
+                @Html.DropDownList("SubCategory", new SelectList(ViewBag.ListData, "ID", "Name"), htmlAttributes: new { @id = "SubCategory", @class = "form-control" })
+            </div>
+            <div class="col-md-3">
+                @Html.Editor("Specification", new { htmlAttributes = new { @id = "Specification", @class = "form-control" } })
+            </div>
+            <div class="col-md-3">
+                @Html.Editor("Variant", new { htmlAttributes = new { @id = "Variant", @class = "form-control" } })
+            </div>
+        </div>
+
+
         <div class="form-group">
             @Html.LabelFor(model => model.PartId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -116,5 +196,7 @@
 </div>
 
 @section Scripts {
+
     @Scripts.Render("~/bundles/jqueryval")
 }
+

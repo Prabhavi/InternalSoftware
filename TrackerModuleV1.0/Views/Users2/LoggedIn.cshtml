@@ -1,0 +1,9 @@
+﻿
+@{
+    Layout = null;
+}
+
+@if (Session["UserId"] != null)
+{
+    <h4>Hello @Session["FirstName"].ToString()</h4>
+}
