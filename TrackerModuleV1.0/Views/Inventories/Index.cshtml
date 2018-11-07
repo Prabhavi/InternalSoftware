@@ -1,268 +1,45 @@
-﻿@*@model IEnumerable<TrackerModuleV1._0.Models.PTM.Inventory>
+﻿@model IEnumerable<TrackerModuleV1._0.Models.PTM.Inventory>
 
-    @{
-        ViewBag.Title = "Inventory";
-    }
-
-    <h2>Index</h2>
-
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-
-    @using (Html.BeginForm("Index", "Inventories", FormMethod.Get))
-    {
-
-    }
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ShortDescription)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MaterialType)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.StoreLocation)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.UnitPrice)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DeliveryStatus)
-                </th>
-                <th>*@
-@*@Html.DisplayNameFor(model => model.DeliveryDate)*@
-@*@Html.ActionLink("Delivery Date", "Index", new { sortOrder = ViewBag.DateSortParm })
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OpenOrderQnty)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QntyInTransit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeliveryLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeliveryQnty)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UoM)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UsedQnty)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastUsedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Stock)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SafetyStock)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RackNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LineNo)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ShortDescription)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaterialType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StoreLocation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UnitPrice)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeliveryStatus)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeliveryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OpenOrderQnty)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.QntyInTransit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeliveryLocation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeliveryQnty)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UoM)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UsedQnty)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastUsedDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Stock)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SafetyStock)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RackNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LineNo)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.InventoryId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.InventoryId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.InventoryId })
-                </td>
-            </tr>
-        }
-
-    </table>*@
-@model IEnumerable<TrackerModuleV1._0.Models.PTM.Inventory>
 @{
-    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+    ViewBag.Title = "Index";
 }
-@{
-    ViewBag.Title = "Inventory";
-}
-<h2>Inventory</h2>
+
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-@using (Html.BeginForm("Index", "Inventories", FormMethod.Get))
-{
-    <div class="form-horizontal">
-        <div class="form-group">
-                <div class="col-md-2">
-                    Project Code
-                </div>
-                <div class="col-md-10">
-                    @Html.TextBox("SearchString", null, new { @class = "form-control" })
-                </div>
-            </div>
-        <div class="form-group">
-                <div class="col-md-2">
-                    Material Code
-                </div>
-                <div class="col-md-10">
-                    @Html.TextBox("SearchString", null, new { @class = "form-control" })
-                </div>
-            </div>
-        <div class="form-group">
-            <div class="col-md-2">
-                Material Description
-            </div>
-            <div class="col-md-10">
-                @Html.TextBox("searchDesc", null, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-                <div class="col-md-2">
-                    Name of the Supplier
-                </div>
-                <div class="col-md-10">
-                    @Html.TextBox("searchSupplier", null, new { @class = "form-control" })
-                </div>
-            </div>
-        <div class="form-group">
-                <div class="col-md-2">
-                    Delivered Date Range
-                </div>
-                <div class="col-md-10">
-                    @Html.TextBox("SearchString", null, new { @class = "form-control" })
-                </div>
-            </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-5">
-                <div class="col-md-2">
-                    <input type="submit" value="Search" class="btn btn-primary" />
-                </div>
-                <div class="col-md-2">
-                    <input type="reset" value="Clear All" class="btn btn-info" />
-                </div>
-            </div>
-        </div>
-        @*<p>
-                Project Code @Html.TextBox("SearchString")
-                <input type="submit" value="Search" />
-            </p>
-            <p>
-                <input type="submit" value="Search" />
-            </p>*@
-    </div>
-}
-
-<table class="table table-bordered table-striped table-hover">
+<table class="table">
     <tr>
-        @*<th>
-            @Html.DisplayName("Inventory ID")
-        </th>*@
         <th>
-            @Html.DisplayName("Proj")
+            @Html.DisplayName("Part Number")
         </th>
         <th>
-            @Html.DisplayName("Part ID")
+            @Html.DisplayName("Short Description")
         </th>
         <th>
-            @Html.DisplayName("Desc")
+            @Html.DisplayName("Supplier Name")
         </th>
         <th>
-            @Html.DisplayName("Mat Type")
+            @Html.DisplayNameFor(model => model.UoM)
         </th>
         <th>
-            @Html.DisplayName("User")
+            @Html.DisplayName("Used Qnty")
         </th>
         <th>
-            @Html.DisplayName("Store Loc")
+            @Html.DisplayNameFor(model => model.InStock)
         </th>
         <th>
-            @Html.DisplayName("Unit Price")
+            @Html.DisplayName("Safety Stock")
         </th>
         <th>
-            @Html.DisplayName("Supplier")
+            @Html.DisplayNameFor(model => model.RackNo)
         </th>
         <th>
-            @Html.DisplayName("Del Stat")
+            @Html.DisplayNameFor(model => model.LineNo)
         </th>
         <th>
-            @*@Html.DisplayName("Del Date")*@
-            @Html.ActionLink("Del Date", "Index", new { sortOrder = ViewBag.DateSortParm })
-        </th>
-        <th>
-            @Html.DisplayName("Open Ord Qty")
-        </th>
-        <th>
-            @Html.DisplayName("Qty In-Transit")
-        </th>
-        <th>
-            @Html.DisplayName("Del Loc")
-        </th>
-        <th>
-            @Html.DisplayName("Del Qty")
-        </th>
-        <th>
-            @Html.DisplayName("UoM")
-        </th>
-        <th>
-            @Html.DisplayName("Used Qty")
+            @Html.DisplayName("Store Location")
         </th>
         <th>
             @Html.DisplayName("Last Used Date")
@@ -270,181 +47,53 @@
         <th>
             @Html.DisplayName("Last User")
         </th>
-        <th>
-            @Html.DisplayName("Stk")
-        </th>
-        <th>
-            @Html.DisplayName("Safety Stk")
-        </th>
-        <th>
-            @Html.DisplayName("Rack No")
-        </th>
-        <th>
-            @Html.DisplayName("Line No")
-        </th>
-
+        <th></th>
     </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.InventoryId)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Project.ProjectName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Part.PartId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShortDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaterialType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StoreLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnitPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Supplier)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeliveryStatus)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeliveryDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpenOrderQnty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QntyInTransit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeliveryLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeliveryQnty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UoM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UsedQnty)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUsedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastUser)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SafetyStock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RackNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LineNo)
-            </td>
-        </tr>
-    }
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part.PartId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part.PartName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UoM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsedQnty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SafetyStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RackNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LineNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StoreLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUsedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUser.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id1 = item.PartId, id2=item.SupplierId }) |
+            @Html.ActionLink("Details", "Details", new { id1 = item.PartId, id2 = item.SupplierId }) |
+            @Html.ActionLink("Delete", "Delete", new { id1 = item.PartId, id2 = item.SupplierId })
+        </td>
+    </tr>
+}
+
 </table>
-
-<br />
-<br />
-
-@*<h3>Legend</h3>
-    <table class="table table-bordered table-striped">
-        <tr>
-            <td><b>Proj</b></td>
-            <td>Project Name</td>
-        </tr>
-        <tr>
-            <td><b>Part Name</b></td>
-            <td>Part Name</td>
-        </tr>
-        <tr>
-            <td><b>Desc</b></td>
-            <td>Short Description</td>
-        </tr>
-        <tr>
-            <td><b>Store Loc</b></td>
-            <td>Store Location</td>
-        </tr>
-        <tr>
-            <td><b>Unit Price</b></td>
-            <td>Unit Price</td>
-        </tr>
-        <tr>
-            <td><b>Supplier</b></td>
-            <td>Name of the Supplier</td>
-        </tr>
-        <tr>
-            <td><b>Del Stat</b></td>
-            <td>Delivery Status</td>
-        </tr>
-        <tr>
-            <td><b>Del Date</b></td>
-            <td>Delivery Date</td>
-        </tr>
-        <tr>
-            <td><b>Open Ord Qty</b></td>
-            <td>Open Ordered Quantity</td>
-        </tr>
-        <tr>
-            <td><b>Qty In-Transit</b></td>
-            <td>Quantity In-Transit</td>
-        </tr>
-        <tr>
-            <td><b>Del Loc</b></td>
-            <td>Delivery Location</td>
-        </tr>
-        <tr>
-            <td><b>Del Qty</b></td>
-            <td>Delivery Quantity</td>
-        </tr>
-        <tr>
-            <td><b>UoM</b></td>
-            <td>Unit of Measurement</td>
-        </tr>
-        <tr>
-            <td><b>Used Qty</b></td>
-            <td>Used Quantity</td>
-        </tr>
-        <tr>
-            <td><b>Last Used Date</b></td>
-            <td>Last Used Date</td>
-        </tr>
-        <tr>
-            <td><b>Last User</b></td>
-            <td>Last User</td>
-        </tr>
-        <tr>
-            <td><b>Stk</b></td>
-            <td>Stock</td>
-        </tr>
-        <tr>
-            <td><b>Safety Stk</b></td>
-            <td>Safety Stk</td>
-        </tr>
-        <tr>
-            <td><b>Rack No</b></td>
-            <td>Rack Number</td>
-        </tr>
-        <tr>
-            <td><b>Line No</b></td>
-            <td>Line Number</td>
-        </tr>
-
-    </table>*@
-

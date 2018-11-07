@@ -1,7 +1,5 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.Part
-@{
-    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
-}
+
 @{
     ViewBag.Title = "Create";
 }
@@ -9,28 +7,29 @@
 <h2>Create</h2>
 
 <head>
-
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script>
         $(document).ready(function () {
+
             $("#PartType").change(function () {
                 var PartType = $("#PartType").val();
                 $("#PartTypelabel").text(PartType);
                 ////////
+                debugger
+                $.ajax({
+                    type: "post",
+                    url: "/Parts/getSubcategory?PartType=" + PartType,
+                    contentType: "html",
+                    success: function (response) {
+                        debugger
+                        $("#SubCategory").empty();
+                        $("#SubCategory").append(response);
+                    }
+                })
 
 
-                //    var partTypeList = Enum.GetValues(typeof (SubCategory))
-                //        .Cast<PartType>()
-                //        .Select(t => new AccessClass
-                //    {
-                //                ID = ((int)t),
-                //        Name = t.ToString()
-                //});
-                //ViewBag.ListData = partTypeList;
 
-                ///////
-
-                //alert(PartType);
             });
 
 
@@ -48,25 +47,48 @@
                 var Specification = $(this).val();
                 $("#Variantlabel").text(Specification);
             })
+
+
+
+            $("#generate").click(function () {
+                $("#PartType").attr("disabled", true);
+                $("#SubCategory").attr("disabled", true);
+                $("#Specification").attr("disabled", true);
+                $("#Variant").attr("disabled", true);
+                $("#reset").attr("disabled", false);
+                $("#generate").attr("disabled", true);
+                //$("#PartNumber").text($("#PartType").val() + $("#SubCategory").val() + $("#Specification").val() + $("#Variant").val());
+                $("#PartId").val($("#PartType").val() + $("#SubCategory").val() + $("#Specification").val() + $("#Variant").val());
+
+            })
+            $("#reset").click(function () {
+
+                $("#PartType").attr("disabled", false);
+                $("#SubCategory").attr("disabled", false);
+                $("#Specification").attr("disabled", false);
+                $("#Variant").attr("disabled", false);
+                $("#generate").attr("disabled", false);
+                $("#reset").attr("disabled", true);
+            })
         });
     </script>
 </head>
-@using (Html.BeginForm())
+@using (Html.BeginForm("Create", "Parts", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h4>Part</h4>
+    <div class="form-horizontal" style="border:1px solid black;padding:20px 20px 20px 20px">
+        <h4>Create Part Number </h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group">
             <div class="col-md-3">
-                @Html.Label("PartType: ")
+                @Html.Label("Part Type: ")
                 @Html.Label(" ", new { id = "PartTypelabel" })
             </div>
             <div class="col-md-3">
-                @Html.Label("SubCategory: ")
+                @Html.Label("Sub Category: ")
                 @Html.Label(" ", new { id = "SubCategorylabel" })
             </div>
             <div class="col-md-3">
@@ -80,31 +102,41 @@
         </div>
         <div class="form-group">
             <div class="col-md-3">
-                @Html.DropDownList("PartType", new SelectList(ViewBag.ListData, "ID", "Name"), htmlAttributes: new { @id = "PartType", @class = "form-control" })
+                @Html.DropDownList("Part Type", new SelectList(ViewBag.ListData, "ID", "Name"), "-- Select PartType -- ", htmlAttributes: new { @id = "PartType", @class = "form-control" })
 
             </div>
             <div class="col-md-3">
-                @Html.DropDownList("SubCategory", new SelectList(ViewBag.ListData, "ID", "Name"), htmlAttributes: new { @id = "SubCategory", @class = "form-control" })
+                @Html.DropDownList("Sub Category", new SelectList(""), htmlAttributes: new { @id = "SubCategory", @class = "form-control" })
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 @Html.Editor("Specification", new { htmlAttributes = new { @id = "Specification", @class = "form-control" } })
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 @Html.Editor("Variant", new { htmlAttributes = new { @id = "Variant", @class = "form-control" } })
             </div>
+            <div class="col-md-1">
+                <input type="button" value="Generate" class="btn btn-default" id="generate" />
+            </div>
+            <div class="col-md-1">
+                <input type="button" value="Reset" class="btn btn-default" id="reset" disabled />
+            </div>
         </div>
+    </div>
 
+
+    <div class="form-horizontal" style="padding:20px 20px 20px 20px">
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PartId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PartId, "Part Number", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PartId, new { htmlAttributes = new { @class = "form-control" } })
+
+                @Html.EditorFor(model => model.PartId, new { htmlAttributes = new { @id = "PartId", @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PartId, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PartName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PartName, "Short Description", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PartName, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PartName, "", new { @class = "text-danger" })
@@ -112,76 +144,84 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PartDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PartDescription, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PartDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.PartDescription, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PartDescription, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NovenaTecPartNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NovenaTecPartNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NovenaTecPartNumber, "", new { @class = "text-danger" })
+                @Html.LabelFor(model => model.NovenaTecPartNumber, "NovenaTec PartNum", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NovenaTecPartNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NovenaTecPartNumber, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SwissRanksPartNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SwissRanksPartNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SwissRanksPartNumber, "", new { @class = "text-danger" })
+                @Html.LabelFor(model => model.SwissRanksPartNumber, "SwissRanks PartNum", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SwissRanksPartNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SwissRanksPartNumber, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.OEMPartNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.OEMPartNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.OEMPartNumber, "", new { @class = "text-danger" })
+                @Html.LabelFor(model => model.OEMPartNumber, "OEM PartNumber", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.OEMPartNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.OEMPartNumber, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.VendorPartNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.VendorPartNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.VendorPartNumber, "", new { @class = "text-danger" })
+                @Html.LabelFor(model => model.VendorPartNumber, "Vendor PartNumber", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VendorPartNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VendorPartNumber, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.StockQuantity, "Stck Qnty", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.StockQuantity, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StockQuantity, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
         <div class="form-group">
-            @Html.LabelFor(model => model.StockQuantity, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.Label("Attachment", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StockQuantity, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.StockQuantity, "", new { @class = "text-danger" })
+                <input name="fileupload" type="file" value=" " />
+
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.DropDownListFor(model => model.Status, new SelectList(ViewBag.Status), "-- Select Status --", htmlAttributes: new { @id = "Status", @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreatedUserId, "CreatedUserId", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CreatedUserId, "Created UserId", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("CreatedUserId", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CreatedUserId, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ApprovedUserId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ApprovedUserId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ApprovedUserId, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.ApprovedUserId, "Approved UserId", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ApprovedUserId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ApprovedUserId, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

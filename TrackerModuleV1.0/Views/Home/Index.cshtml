@@ -77,6 +77,16 @@
                 @Html.DisplayName("Collaborators")
             </p>
         </div>
+        <div class="col-md-4">
+            @*<img src="~/Content/images/users4.png" alt="Users Icon" width=50% height=50%>*@
+            <a href='@Url.Action("Index", "PurchaseOrders")'>
+                <img src='@Url.Content("~/Content/images/purchaseorder3.png")' alt='User Icon' width=50% height=50% />
+            </a>
+            <p style="text-align:center;color:#2f75b5">
+                @*@Html.ActionLink("Collaborators", "Index", "Users")*@
+                @Html.DisplayName("PurchaseOrders")
+            </p>
+        </div>
     </div>
 </center>
 

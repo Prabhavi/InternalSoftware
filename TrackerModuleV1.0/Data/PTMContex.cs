@@ -21,9 +21,20 @@ namespace TrackerModuleV1._0.Data
         public DbSet<Level> Levels { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+
+            ////COMPOSITE KEY FOR INVENTORY TABLE
+            modelBuilder.Entity<Inventory>().HasKey(i => new
+            {
+                i.PartId,
+                i.SupplierId
+            });
+
 
             ///// MANY TO MANY >>> USER(M)---PROJECT(M)
             modelBuilder.Entity<User>()
@@ -70,11 +81,45 @@ namespace TrackerModuleV1._0.Data
                 .HasRequired<User>(p => p.CreatedBy)
                 .WithMany(u => u.Parts)
                 .HasForeignKey<string>(p => p.CreatedUserId);
-                
 
+
+            ///// ONE TO MANY RELATIONSHIP >>>> PART(O)--- PURCHASEORDER(M)
+            modelBuilder.Entity<PurchaseOrder>()
+                .HasRequired<Part>(p => p.Part)
+                .WithMany(u => u.PurchaseOrders)
+                .HasForeignKey<string>(p => p.PartNumber);
+
+            ///// ONE TO MANY RELATIONSHIP >>>> PROJECT(O)--- PURCHASEORDER(M)
+            modelBuilder.Entity<PurchaseOrder>()
+                .HasRequired<Project>(p => p.Project)
+                .WithMany(u => u.PurchaseOrder)
+                .HasForeignKey<string>(p => p.ProjectNumber);
+
+            ///// ONE TO MANY RELATIONSHIP >>>> SUPPLIER(O)--- PURCHASEORDER(M)
+            modelBuilder.Entity<PurchaseOrder>()
+                .HasRequired<Supplier>(p => p.Supplier)
+                .WithMany(u => u.PurchaseOrder)
+                .HasForeignKey<string>(p => p.SupplierId);
            
 
-            base.OnModelCreating(modelBuilder);
+            ///// ONE TO MANY RELATIONSHIP >>>> USER(O)--- PURCHASEORDER(M)
+            modelBuilder.Entity<PurchaseOrder>()
+                .HasRequired<User>(p => p.OrderBy)
+                .WithMany(u => u.PurchaseOrder)
+                .HasForeignKey<string>(p => p.OrderById);
+
+            ///// ONE TO MANY RELATIONSHIP >>>> USER(O)--- INVENTORY(M)
+            modelBuilder.Entity<Inventory>()
+                .HasOptional<User>(p => p.LastUser)
+                .WithMany(u => u.Inventories)
+                .HasForeignKey<string>(p => p.LastUserId);
+
+            /////// ONE TO MANY RELATIONSHIP >>>> USER(O)--- PURCHASEORDER(M)
+            //modelBuilder.Entity<PurchaseOrder>()
+            //    .HasRequired<User>(p => p.ApproveBy)
+            //    .WithMany(u => u.PurchaseOrder)
+            //    .HasForeignKey<string>(p => p.ApproveUserId);
+            //base.OnModelCreating(modelBuilder);
 
             //modelBuilder.Entity<Project>()
             //    .HasMany(c => c.users).WithMany(i => i.projects)

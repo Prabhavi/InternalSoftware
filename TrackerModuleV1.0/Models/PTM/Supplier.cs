@@ -19,5 +19,6 @@ namespace TrackerModuleV1._0.Models.PTM
         public string ContactNo { get; set; }
 
         public virtual ICollection<Part> Parts { get; set; }
+        public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
     }
 }

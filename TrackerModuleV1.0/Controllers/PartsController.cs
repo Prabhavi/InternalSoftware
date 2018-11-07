@@ -30,11 +30,17 @@ namespace TrackerModuleV1._0.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Part part = db.Parts.Find(id);
+            //Part part = db.Parts.Find(id);
+            Part part = db.Parts
+             .Include(i => i.ApproveBy)
+             .Include(i => i.CreatedBy)
+             .Include(i => i.Suppliers)
+             .SingleOrDefault(x => x.PartId == id);
             if (part == null)
             {
                 return HttpNotFound();
             }
+            ViewBag.FilePath = part.FilePath;
             return View(part);
         }
 
@@ -50,6 +56,8 @@ namespace TrackerModuleV1._0.Controllers
                 });
             ViewBag.ListData = partTypeList;
 
+            var status = Enum.GetValues(typeof(Status));
+            ViewBag.Status = status;
 
             ViewBag.CreatedUserId = new SelectList(db.Users, "UserId", "FirstName");
             return View();
@@ -60,8 +68,21 @@ namespace TrackerModuleV1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PartId,PartName,PartDescription,NovenaTecPartNumber,SwissRanksPartNumber,OEMPartNumber,VendorPartNumber,StockQuantity,Status,CreatedUserId,ApprovedUserId")] Part part)
+        public ActionResult Create([Bind(Include = "PartId,PartName,PartDescription,FileName,FilePath,Status,CreatedUserId")] Part part, HttpPostedFileBase fileupload)
         {
+            string filename = string.Empty;
+            string filepath = string.Empty;
+
+
+
+            if (fileupload != null)
+            {
+                filename = fileupload.FileName;
+                filepath = Server.MapPath("~/Content/AttachmentsPart/");
+                fileupload.SaveAs(filepath + filename);
+                part.FileName = filename;
+                part.FilePath = "~/Content/AttachmentsPart/" + filename;
+            }
             if (ModelState.IsValid)
             {
                 db.Parts.Add(part);
@@ -141,6 +162,59 @@ namespace TrackerModuleV1._0.Controllers
             base.Dispose(disposing);
         }
 
-        
+
+        public ActionResult getSubcategory(int partType)
+        {
+            switch (partType)
+            {
+                case 1:
+                    var SubCategoryList1 = Enum.GetValues(typeof(Document))
+                .Cast<Document>()
+                .Select(t => new AccessClass
+                {
+                    ID = ((int)t),
+                    Name = t.ToString()
+                });
+                    ViewBag.SubCategoryList = SubCategoryList1;
+                    break;
+
+                case 2:
+                    var SubCategoryList2 = Enum.GetValues(typeof(Record))
+                .Cast<Record>()
+                .Select(t => new AccessClass
+                {
+                    ID = ((int)t),
+                    Name = t.ToString()
+                });
+                    ViewBag.SubCategoryList = SubCategoryList2;
+                    break;
+                case 3:
+                    var SubCategoryList3 = Enum.GetValues(typeof(Mechanical_Part))
+                .Cast<Mechanical_Part>()
+                .Select(t => new AccessClass
+                {
+                    ID = ((int)t),
+                    Name = t.ToString()
+                });
+                    ViewBag.SubCategoryList = SubCategoryList3;
+                    break;
+
+            }
+            //if(partType== 1)
+            //{
+            //    var SubCategoryList = Enum.GetValues(typeof(Document))
+            //    .Cast<Document>()
+            //    .Select(t => new AccessClass
+            //    {
+            //        ID = ((int)t),
+            //        Name = t.ToString()
+            //    });
+            //    ViewBag.SubCategoryList = SubCategoryList;
+            //    //return PartialView("DisplaySubcategory");
+            //}
+            return PartialView("DisplaySubcategory");
+        }
+
+
     }
 }

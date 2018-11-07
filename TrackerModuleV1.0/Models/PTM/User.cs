@@ -21,9 +21,14 @@ namespace TrackerModuleV1._0.Models.PTM
             get { return FirstName + " " + LastName; }
         }
         public string JobRole { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
         //public int ProjectNumber { get; set; }
         //public Project Project { get; set; }
         public ICollection<Part> Parts { get; set; }
         public virtual ICollection<Project> projects { get; set; }
+
+        public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
+        public ICollection<Inventory> Inventories { get; set; }
     }
 }

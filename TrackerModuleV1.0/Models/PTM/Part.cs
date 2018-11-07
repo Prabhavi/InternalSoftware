@@ -23,13 +23,24 @@ namespace TrackerModuleV1._0.Models.PTM
         public string VendorPartNumber { get; set; }
         public int StockQuantity { get; set; }
         public string Status { get; set; }
-        public string CreatedUserId{get; set;}
+        public string CreatedUserId { get; set; }
         public string ApprovedUserId { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        //public IEnumerable<HttpPostedFileBase> File { get; set; }
         public User CreatedBy { get; set; }
         public User ApproveBy { get; set; }
 
         public virtual ICollection<Project> Projects { get; set; }
         public virtual ICollection<Level> Levels { get; set; }
         public virtual ICollection<Supplier> Suppliers { get; set; }
+        public  ICollection<PurchaseOrder> PurchaseOrders { get; set; }
+    }
+
+    public enum Status
+    {
+        Not_Approved,
+        Approved,
+        In_Progress
     }
 }

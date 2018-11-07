@@ -21,5 +21,7 @@ namespace TrackerModuleV1._0.Models.PTM
         public virtual ICollection<User> users { get; set; }
 
         public virtual ICollection <Part> parts { get; set; }
+
+        public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
     }
 }

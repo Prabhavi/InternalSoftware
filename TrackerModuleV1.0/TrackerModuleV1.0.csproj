@@ -174,6 +174,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PartsController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\PurchaseOrdersController.cs" />
     <Compile Include="Controllers\SuppliersController.cs" />
     <Compile Include="Controllers\Users2Controller.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -322,6 +323,30 @@
     <Compile Include="Migrations\PTM\201810221147286_add Inventory table.Designer.cs">
       <DependentUpon>201810221147286_add Inventory table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\PTM\201810310904472_AddFileUpload.cs" />
+    <Compile Include="Migrations\PTM\201810310904472_AddFileUpload.Designer.cs">
+      <DependentUpon>201810310904472_AddFileUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PTM\201811050702478_update usermodel.cs" />
+    <Compile Include="Migrations\PTM\201811050702478_update usermodel.Designer.cs">
+      <DependentUpon>201811050702478_update usermodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PTM\201811051122163_Add purchaseOder Model2.cs" />
+    <Compile Include="Migrations\PTM\201811051122163_Add purchaseOder Model2.Designer.cs">
+      <DependentUpon>201811051122163_Add purchaseOder Model2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PTM\201811060912019_Inventory Model update.cs" />
+    <Compile Include="Migrations\PTM\201811060912019_Inventory Model update.Designer.cs">
+      <DependentUpon>201811060912019_Inventory Model update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PTM\201811060917591_Inventory Model update primarykey.cs" />
+    <Compile Include="Migrations\PTM\201811060917591_Inventory Model update primarykey.Designer.cs">
+      <DependentUpon>201811060917591_Inventory Model update primarykey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\PTM\201811061158307_Purchase order date type.cs" />
+    <Compile Include="Migrations\PTM\201811061158307_Purchase order date type.Designer.cs">
+      <DependentUpon>201811061158307_Purchase order date type.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PTM\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -331,6 +356,7 @@
     <Compile Include="Models\PTM\Level.cs" />
     <Compile Include="Models\PTM\Part.cs" />
     <Compile Include="Models\PTM\Project.cs" />
+    <Compile Include="Models\PTM\PurchaseOrder.cs" />
     <Compile Include="Models\PTM\Supplier.cs" />
     <Compile Include="Models\PTM\User.cs" />
     <Compile Include="Models\PTM\ViewModel.cs" />
@@ -415,11 +441,6 @@
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Projects\SelectedProject.cshtml" />
     <Content Include="Views\Shared\_LayoutLoginPage.cshtml" />
-    <Content Include="Views\Inventories\Create.cshtml" />
-    <Content Include="Views\Inventories\Delete.cshtml" />
-    <Content Include="Views\Inventories\Details.cshtml" />
-    <Content Include="Views\Inventories\Edit.cshtml" />
-    <Content Include="Views\Inventories\Index.cshtml" />
     <Content Include="Views\Parts\Create.cshtml" />
     <Content Include="Views\Parts\Delete.cshtml" />
     <Content Include="Views\Parts\Details.cshtml" />
@@ -435,9 +456,21 @@
     <Content Include="Views\Users2\Login.cshtml" />
     <Content Include="Views\Users2\LoggedIn.cshtml" />
     <Content Include="Views\Shared\_LayoutHomePage.cshtml" />
+    <Content Include="Views\Shared\DisplaySubcategory.cshtml" />
+    <Content Include="Views\Inventories\Create.cshtml" />
+    <Content Include="Views\Inventories\Delete.cshtml" />
+    <Content Include="Views\Inventories\Details.cshtml" />
+    <Content Include="Views\Inventories\Edit.cshtml" />
+    <Content Include="Views\Inventories\Index.cshtml" />
+    <Content Include="Views\PurchaseOrders\Create.cshtml" />
+    <Content Include="Views\PurchaseOrders\Delete.cshtml" />
+    <Content Include="Views\PurchaseOrders\Details.cshtml" />
+    <Content Include="Views\PurchaseOrders\Edit.cshtml" />
+    <Content Include="Views\PurchaseOrders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\AttachmentsPart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -552,6 +585,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\PTM\201810221147286_add Inventory table.resx">
       <DependentUpon>201810221147286_add Inventory table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PTM\201810310904472_AddFileUpload.resx">
+      <DependentUpon>201810310904472_AddFileUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PTM\201811050702478_update usermodel.resx">
+      <DependentUpon>201811050702478_update usermodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PTM\201811051122163_Add purchaseOder Model2.resx">
+      <DependentUpon>201811051122163_Add purchaseOder Model2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PTM\201811060912019_Inventory Model update.resx">
+      <DependentUpon>201811060912019_Inventory Model update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PTM\201811060917591_Inventory Model update primarykey.resx">
+      <DependentUpon>201811060917591_Inventory Model update primarykey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\PTM\201811061158307_Purchase order date type.resx">
+      <DependentUpon>201811061158307_Purchase order date type.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace TrackerModuleV1._0.Models.PTM
 {
@@ -20,7 +21,20 @@ namespace TrackerModuleV1._0.Models.PTM
             Other = 9
 
         }
-        public enum Document_SubCategory
+
+        //public  JsonResult subCategoryBind(string Part_Type)
+        //{
+        //    var subcategorylist = Enum.GetValues(typeo
+        //        .Cast<PartType>()
+        //        .Select(t => new AccessClass
+        //        {
+        //            ID = ((int)t),
+        //            Name = t.ToString()
+        //        });
+        //}
+
+
+        public enum Document
         {
             Product_Definition = 100,
             Concept_Proposal = 101,
@@ -35,7 +49,7 @@ namespace TrackerModuleV1._0.Models.PTM
 
         }
 
-        public enum Record_SubCategory
+        public enum Record
         {
             Mechanical_Design_Review_Record = 200,
             Mechanical_Design_Review_Record_3d_Diagram = 201,
@@ -46,7 +60,7 @@ namespace TrackerModuleV1._0.Models.PTM
             Ceritfication = 005
         }
 
-        public enum MechanicalPart_SubCategory
+        public enum Mechanical_Part
         {
             Automation_Components = 100,
             Framing_Support = 200,

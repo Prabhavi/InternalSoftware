@@ -16,69 +16,41 @@ namespace TrackerModuleV1._0.Controllers
         private PTMContex db = new PTMContex();
 
         // GET: Inventories
-        //public ActionResult Index()
-        //{
-        //    return View(db.Inventories.ToList());
-        //}
-
-        public ActionResult Index(string sortOrder, string searchDesc, string id)
+        public ActionResult Index()
         {
-            //ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "PartName" : "";
-            ViewBag.DateSortParm = sortOrder == "DeliveryDate" ? "DeliveryDate_desc" : "DeliveryDate";
-            var inventories = from i in db.Inventories
-                              select i;
-            if (!String.IsNullOrEmpty(searchDesc))
-            {
-                inventories = inventories.Where(i => i.ShortDescription.Contains(searchDesc));
-            }
-            switch (sortOrder)
-            {
-                //case "PartName":
-                //    inventories = inventories.OrderByDescending(i => i.Part);
-                //    break;
-                case "DeliveryDate":
-                    inventories = inventories.OrderBy(i => i.DeliveryDate);
-                    break;
-                //case "DeliveryDate_desc":
-                //    inventories = inventories.OrderByDescending(i => i.DeliveryDate);
-                //    break;
-                default:
-                    //inventories = inventories.OrderBy(i => i.Part);
-                    inventories = inventories.OrderByDescending(i => i.DeliveryDate);
-                    break;
-            }
+            var inventories = db.Inventories.Include(i => i.LastUser).Include(i => i.Part).Include(i => i.Supplier);
             return View(inventories.ToList());
-
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
-            //Part inventory = db.Parts.Find(id);
-            //if (inventory != null)
-            //{
-            //    //return HttpNotFound();
-            //}
-            //return View(inventory);
         }
 
         // GET: Inventories/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(string id1, string id2)
         {
-            if (id == null)
+            if (id1 == null || id2 == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventories.Find(id);
+            //Inventory inventory = db.Inventories.Find(id1,id2);
+
+            Inventory inventory = db.Inventories
+              .Include(i => i.LastUser)
+              .Include(i => i.Part)
+              .Include(i => i.Supplier)
+              .SingleOrDefault(x => x.PartId == id1 && x.SupplierId == id2);
+
             if (inventory == null)
             {
                 return HttpNotFound();
             }
+            
             return View(inventory);
         }
 
         // GET: Inventories/Create
         public ActionResult Create()
         {
+            ViewBag.LastUserId = new SelectList(db.Users, "UserId", "FirstName");
+            ViewBag.PartId = new SelectList(db.Parts, "PartId", "PartId");
+            ViewBag.SupplierId = new SelectList(db.Suppliers, "SupplierId", "SupplierName");
             return View();
         }
 
@@ -87,30 +59,47 @@ namespace TrackerModuleV1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Part_PartId,InventoryId,ShortDescription,MaterialType,StoreLocation,UnitPrice,DeliveryStatus,DeliveryDate,OpenOrderQnty,QntyInTransit,DeliveryLocation,DeliveryQnty,UoM,UsedQnty,LastUsedDate,Stock,SafetyStock,RackNo,LineNo")] Inventory inventory)
+        public ActionResult Create([Bind(Include = "PartId,SupplierId,UoM,UsedQnty,InStock,SafetyStock,RackNo,LineNo,StoreLocation,LastUsedDate,LastUserId")] Inventory inventory)
         {
             if (ModelState.IsValid)
             {
+                
+                //var inventoryx = db.Inventories.SingleOrDefault(p => p.PartId == PartId);
+                var part = db.Parts.SingleOrDefault(p => p.PartId == inventory.PartId);
+                if (part != null)
+                {
+
+                    inventory.Part.Equals(part);
+                }
                 db.Inventories.Add(inventory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
+            
+            ViewBag.LastUserId = new SelectList(db.Users, "UserId", "FirstName", inventory.LastUserId);
+            ViewBag.PartId = new SelectList(db.Parts, "PartId", "PartName", inventory.PartId);
+            ViewBag.SupplierId = new SelectList(db.Suppliers, "SupplierId", "SupplierName", inventory.SupplierId);
             return View(inventory);
         }
 
         // GET: Inventories/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(string id1,string id2)
         {
-            if (id == null)
+            if (id1 == null || id2 == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventories.Find(id);
+            
+            //db.Inventories.Find()
+            Inventory inventory = db.Inventories.Find(id1,id2);
             if (inventory == null)
             {
                 return HttpNotFound();
             }
+            ViewBag.LastUserId = new SelectList(db.Users, "UserId", "FirstName", inventory.LastUserId);
+            ViewBag.PartId = new SelectList(db.Parts, "PartId", "PartName", inventory.PartId);
+            ViewBag.SupplierId = new SelectList(db.Suppliers, "SupplierId", "SupplierName", inventory.SupplierId);
             return View(inventory);
         }
 
@@ -119,7 +108,7 @@ namespace TrackerModuleV1._0.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "InventoryId,ShortDescription,MaterialType,StoreLocation,UnitPrice,DeliveryStatus,DeliveryDate,OpenOrderQnty,QntyInTransit,DeliveryLocation,DeliveryQnty,UoM,UsedQnty,LastUsedDate,Stock,SafetyStock,RackNo,LineNo")] Inventory inventory)
+        public ActionResult Edit([Bind(Include = "PartId,SupplierId,UoM,UsedQnty,InStock,SafetyStock,RackNo,LineNo,StoreLocation,LastUsedDate,LastUserId")] Inventory inventory)
         {
             if (ModelState.IsValid)
             {
@@ -127,17 +116,20 @@ namespace TrackerModuleV1._0.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.LastUserId = new SelectList(db.Users, "UserId", "FirstName", inventory.LastUserId);
+            ViewBag.PartId = new SelectList(db.Parts, "PartId", "PartName", inventory.PartId);
+            ViewBag.SupplierId = new SelectList(db.Suppliers, "SupplierId", "SupplierName", inventory.SupplierId);
             return View(inventory);
         }
 
         // GET: Inventories/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(string id1, string id2)
         {
-            if (id == null)
+            if (id1 == null || id2 == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Inventory inventory = db.Inventories.Find(id);
+            Inventory inventory = db.Inventories.Find(id1,id2);
             if (inventory == null)
             {
                 return HttpNotFound();
@@ -148,9 +140,9 @@ namespace TrackerModuleV1._0.Controllers
         // POST: Inventories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(string id1, string id2)
         {
-            Inventory inventory = db.Inventories.Find(id);
+            Inventory inventory = db.Inventories.Find(id1,id2);
             db.Inventories.Remove(inventory);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -1,0 +1,9 @@
+﻿
+<option value="">-- Select SubCategory --</option>
+@if (ViewBag.SubCategoryList != null)
+{
+    foreach (var item in ViewBag.SubCategoryList)
+    {
+        <option value="@item.ID">@item.Name</option>
+    }
+}

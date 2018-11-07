@@ -1,0 +1,117 @@
+﻿@model IEnumerable<TrackerModuleV1._0.Models.PTM.PurchaseOrder>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderBy.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Part.PartName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Project.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier.SupplierName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UOM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Currency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenOrderQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApproveStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApproveUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliverDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveredQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantityInTransit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderBy.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Part.PartName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Project.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UOM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Currency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenOrderQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApproveStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApproveUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliverDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveryLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeliveredQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantityInTransit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PurchaseOrderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PurchaseOrderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PurchaseOrderID })
+        </td>
+    </tr>
+}
+
+</table>

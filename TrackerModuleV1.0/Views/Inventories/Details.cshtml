@@ -1,10 +1,8 @@
 ﻿@model TrackerModuleV1._0.Models.PTM.Inventory
-@{
-    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
-}
 
 @{
     ViewBag.Title = "Details";
+    
 }
 
 <h2>Details</h2>
@@ -13,84 +11,36 @@
     <h4>Inventory</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
-            @Html.DisplayNameFor(model => model.ShortDescription)
+            @Html.DisplayName("Short Description")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ShortDescription)
+            @Html.DisplayFor(model => model.Part.PartName)
+        </dd>
+        <dt>
+            @Html.DisplayName("Part Number")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Part.PartId)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MaterialType)
+            @Html.DisplayName("OEM Part Number")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MaterialType)
+            @Html.DisplayFor(model => model.Part.OEMPartNumber)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.StoreLocation)
+            @Html.DisplayName("Supplier Name")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.StoreLocation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UnitPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UnitPrice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DeliveryStatus)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DeliveryStatus)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DeliveryDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DeliveryDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OpenOrderQnty)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OpenOrderQnty)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.QntyInTransit)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.QntyInTransit)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DeliveryLocation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DeliveryLocation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DeliveryQnty)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DeliveryQnty)
+            @Html.DisplayFor(model => model.Supplier.SupplierName)
         </dd>
 
         <dt>
@@ -110,19 +60,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LastUsedDate)
+            @Html.DisplayNameFor(model => model.InStock)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LastUsedDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Stock)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Stock)
+            @Html.DisplayFor(model => model.InStock)
         </dd>
 
         <dt>
@@ -149,9 +91,32 @@
             @Html.DisplayFor(model => model.LineNo)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.StoreLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StoreLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUsedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUsedDate)
+        </dd>
+        <dt>
+            @Html.DisplayName("Last User")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUserId)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.InventoryId }) |
+    @Html.ActionLink("Edit", "Edit", new { id1 = Model.PartId, id2 = Model.SupplierId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
